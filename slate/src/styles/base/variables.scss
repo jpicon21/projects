@@ -1,0 +1,74 @@
+// ***********************************************//
+// colors
+// ***********************************************//
+
+$primary: #180E5D;
+$secondary: #8B7AFF;
+$white: #ffffff;
+$green: #5AE29A;
+$black: #000000;
+$blacktext: #0F0F0F;
+$grayborder: #808080;
+$gray: #8C8C8C;
+$grayThree: #979797;
+$lightgray: #f5f5f5;
+
+// ***********************************************//
+// fonts and weights
+// ***********************************************//
+
+$commissioner: "Commissioner", sans-serif;
+$helvetica: "Helvetica", sans-serif;
+$sans-serif: "Commissioner", Helvetica, Verdana, sans-serif;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+
+$thin: 100;
+$xlight: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$xbold: 800;
+
+// ***********************************************//
+// button & links 
+// ***********************************************//
+
+@mixin button($background-color, $color, $radius, $border, $background-hover, $color-hover, $border-hover) {
+    position: relative;
+    display: inline-block;
+    -webkit-appearance: none!important;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em 2.5em;
+    font-family: $commissioner;
+    font-weight: $semibold;
+    background-color: $background-color;
+    color: $color;
+    border-radius: $radius;
+    border: $border;
+    transition: all 300ms ease;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        background-color: $background-hover;
+        color: $color-hover;
+        border: $border-hover;
+    }
+}
+
+.btn-filled {
+    @include button($primary, $white, 5px, none, $secondary, $white, none);
+}
+
+.btn-outlined {
+    @include button($white, $primary, 5px, 1px solid $primary, $secondary, $white, 1px solid $secondary);
+}
+
+.btn-link {
+    @include button(transparent, $primary, 0, none, transparent, $secondary, none);
+}

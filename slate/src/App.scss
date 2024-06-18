@@ -1,0 +1,25 @@
+// ***********************************************//
+// BASE STYLES
+// ***********************************************//
+
+@import "~bootstrap/scss/bootstrap";
+@import "./styles/base/variables";
+@import './styles/base/animations';
+@import './styles/base/layout';
+
+// ***********************************************//
+// COMPONENTS STYLES
+// ***********************************************//
+
+@import './styles/components/container';
+@import './styles/components/header';
+@import './styles/components/hero';
+@import './styles/components/video';
+@import './styles/components/stats';
+@import './styles/components/features';
+@import './styles/components/highlights';
+@import './styles/components/partners';
+@import './styles/components/cta';
+@import './styles/components/footer';
+@import './styles/components/contact';
+@import './styles/components/login'

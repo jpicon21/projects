@@ -1,0 +1,47 @@
+.header {
+  position: -webkit-sticky;
+  width: 100%;
+  z-index: 100000000;
+  left: 0;
+  background-color: $white;
+  opacity: 0.9;
+  padding: 10px;
+
+  &.blur {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.495669) 0%, rgba(255, 255, 255, 0.498035) 100%);
+    box-shadow: 0px 50px 164px -26px rgba(53, 0, 142, 0.117836);
+    backdrop-filter: blur(54.3656px);
+  }
+
+  .header-container {
+    padding: 1em 0;
+
+    @media screen and (max-width: 500px) {
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .header-logo {
+    @media screen and (max-width: 500px) {
+      padding-bottom: 1.5em;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 280px;
+      cursor: pointer;
+    }
+  }
+  
+  .header-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
+  }
+}

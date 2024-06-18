@@ -1,0 +1,74 @@
+// ***********************************************//
+// global and component layout styles
+// ***********************************************//
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: $commissioner;
+	font-weight: $light;
+	color: $blacktext;
+	background-color: $white;
+	font-size: 16px;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	margin: 0;
+	-webkit-text-size-adjust: 100%;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.title-container {
+    margin-bottom: 4em;
+
+    @media screen and (max-width: 576px) {
+       margin-bottom: 3em;
+    }
+
+    .section-title {
+        font-size: 3.5em;
+        line-height: 1;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 4em;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2.5em;
+        }
+    }
+}
+
+.section-title {
+    font-family: $commissioner;
+    font-size: 2em;
+    position: relative;
+    padding-bottom: 0.5em;
+    font-weight: $xlight;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.875em;
+    }
+
+    strong {
+        display: block;
+        font-weight: $semibold;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0.5em;
+        width: 2.5em;
+        background-color: $primary;
+        transform: translate(0, 100%);
+    }
+}

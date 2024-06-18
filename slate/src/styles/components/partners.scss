@@ -1,0 +1,46 @@
+.section-partners {
+    padding: 5em 0;
+    background-color: $white;
+
+    .title-row {
+        margin-bottom: 5em;
+    }
+
+    .logos-container {
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .logo-col {
+        position: relative;
+
+        &:first-of-type {
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                background-color: $grayThree;
+                width: 1px;
+                height: 13em;
+                transform: translate(-50%, -50%);
+
+                @media screen and (max-width: 576px) {
+                    top: auto;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    transform: translate(0%, 0%);
+                }
+            }
+        }
+    }
+    
+    .partner-image {
+        max-width: 100%;
+        display: block;
+        width: 100%;
+    }
+    
+}

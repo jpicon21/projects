@@ -1,0 +1,101 @@
+.product-features {
+    position: relative;
+    padding-top: 4em;
+    margin-bottom: 4em;
+    //background: linear-gradient(180deg, rgba($white, 0.015) 0.11%, $white 12%); include when stats component is complete
+    overflow: hidden;
+
+    .title-container {
+        position: relative;
+        margin: 0 auto 10em;
+
+        @media screen and (max-width: 991px) {
+            margin-bottom: 0;
+        }
+    }
+
+    .column-title {
+        margin-top: 2em;
+        font-size: 1.5em;
+        text-transform: uppercase;
+
+        .product-title {
+            font-weight: $xlight;
+        }
+        .product-subtitle {
+            font-weight: $semibold;
+        }
+    }
+
+    .desc-image {
+        flex-direction: column;
+
+        .description{
+            max-width: 83%;
+            font-weight: $thin;
+            font-size: 1.25em;
+
+            @media screen and (max-width: 1440px) {
+                max-width: 100%;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                max-width: 80%;
+            }
+
+            @media screen and (max-width: 767px) {
+                max-width: 100%;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.125em;
+            }
+        }
+
+        .image-container {
+            position: relative;
+            margin-right: 1em;
+            align-self: flex-end;
+            transition-delay: 500ms;
+
+            @media screen and (max-width: 991px) {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: 767px) {
+                align-self: center;
+                margin-top: 1em;
+            }
+
+            .feature-image {
+                display: block;
+                margin-left: auto;
+                width: 100%;
+                max-width: 400px;
+                min-height: 400px;
+                object-fit: contain;
+
+                @media screen and (max-width: 991px) {
+                    max-width: 300px;
+                    min-height: auto;
+                }
+
+                @media screen and (max-width: 767px) {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .feature-container-left {
+        @media screen and (min-width: 992px) {
+            margin-top: -10em;   
+        }
+    }
+
+    .features-section {
+        @media screen and (max-width: 767px) {
+            margin: 0 auto;
+        }
+    }
+}
