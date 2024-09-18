@@ -47,6 +47,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         isDisabled={currentPage === 1}
         mr={4}
         size="sm"
+        bg="#FBA919"
+        color="#4A1A55"
+        _hover={{ bg: "#e69b16" }}
       >
         Previous
       </Button>
@@ -69,6 +72,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         isDisabled={currentPage === totalPages}
         ml={4}
         size="sm"
+        bg="#FBA919"
+        color="#4A1A55"
+        _hover={{ bg: "#e69b16" }}
       >
         Next
       </Button>

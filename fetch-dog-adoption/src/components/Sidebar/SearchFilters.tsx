@@ -3,9 +3,11 @@ import { Box, VStack, Heading, Select, Input, Button } from '@chakra-ui/react';
 import { useAtom } from 'jotai';
 import axios from 'axios';
 import { searchFiltersAtom } from '../../atoms/searchAtoms';
+import { searchDogsAtom } from '../../atoms/dogAtom';
 
 const SearchFilters: React.FC = () => {
-  const [filters, setFilters] = useAtom(searchFiltersAtom);
+  const [, setFilters] = useAtom(searchFiltersAtom);
+  const [, searchDogs] = useAtom(searchDogsAtom);
   const [breeds, setBreeds] = useState<string[]>([]);
   const [selectedBreed, setSelectedBreed] = useState('');
   const [zipCode, setZipCode] = useState('');
@@ -15,7 +17,7 @@ const SearchFilters: React.FC = () => {
   useEffect(() => {
     const fetchBreeds = async () => {
       try {
-        const response = await axios.get('https://frontend-take-home-service.fetch.com/dogs/breeds', { withCredentials: true });
+        const response = await axios.get<string[]>('https://frontend-take-home-service.fetch.com/dogs/breeds', { withCredentials: true });
         setBreeds(response.data);
       } catch (error) {
         console.error('Error fetching breeds:', error);
@@ -24,27 +26,30 @@ const SearchFilters: React.FC = () => {
     fetchBreeds();
   }, []);
 
-  const handleApplyFilters = () => {
-    setFilters({
-      ...filters,
+  const handleApplyFilters = async () => {
+    const newFilters = {
       breeds: selectedBreed ? [selectedBreed] : [],
       zipCodes: zipCode ? [zipCode] : [],
       ageMin: ageMin ? parseInt(ageMin) : null,
       ageMax: ageMax ? parseInt(ageMax) : null,
-    });
+    };
+    setFilters(newFilters);
+    await searchDogs(newFilters);
   };
 
-  const handleResetFilters = () => {
+  const handleResetFilters = async () => {
     setSelectedBreed('');
     setZipCode('');
     setAgeMin('');
     setAgeMax('');
-    setFilters({
+    const resetFilters = {
       breeds: [],
       zipCodes: [],
       ageMin: null,
       ageMax: null,
-    });
+    };
+    setFilters(resetFilters);
+    await searchDogs(resetFilters);
   };
 
   return (

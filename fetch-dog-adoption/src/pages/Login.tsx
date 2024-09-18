@@ -39,13 +39,6 @@ const LoginPage: React.FC = () => {
       if (response.status === 200) {
         setIsAuthenticated(true);
         setUser({ name, email });
-        toast({
-          title: "Login successful",
-          description: "You've been successfully logged in.",
-          status: "success",
-          duration: 3000,
-          isClosable: true,
-        });
         navigate('/search');
       }
     } catch (error) {
@@ -66,6 +59,7 @@ const LoginPage: React.FC = () => {
         status: "error",
         duration: 5000,
         isClosable: true,
+        position: "top",
       });
     }
   };

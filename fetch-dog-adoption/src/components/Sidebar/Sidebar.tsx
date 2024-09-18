@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       left={0}
       top={0}
       bottom={0}
-      width={isOpen ? '300px' : '60px'}
+      width={isOpen ? '275px' : '60px'}
       bgGradient="linear(to-b, #4A1A55, #300D38, #1A0720)"
       boxShadow="0 4px 12px 0 rgba(0, 0, 0, 0.2)"
       transition="width 0.3s ease"
