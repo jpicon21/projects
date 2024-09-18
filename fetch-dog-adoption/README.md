@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Dog Adoption Matcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Dog Adoption Matcher is a web application designed to help users find their perfect canine companion. This interactive platform allows users to browse through a variety of dogs, filter based on preferences, and favorite potential matches. The application utilizes a modern, responsive design and offers features such as:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browsing a list of available dogs
+- Filtering dogs based on breed, age, and location
+- Favoriting dogs of interest
+- Generating a match from favorited dogs
+- User authentication
 
-## Expanding the ESLint configuration
+Built with React and TypeScript, this application leverages modern web technologies to provide a smooth and intuitive user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Before you begin, ensure you have met the following requirements:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To install the Dog Adoption Matcher, follow these steps:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+   ```
+   git clone https://github.com/jpicon21/projects
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd fetch-dog-adoption
+   ```
+
+3. Install the dependencies:
+   ```
+   npm install
+   ```
+
+## Running the Application
+
+To run the Dog Adoption Matcher, follow these steps:
+
+1. In the project directory, start the development server:
+   ```
+   npm run dev
+   ```
+
+The application should now be running and accessible through your web browser.
+
+## Usage
+
+1. Log in using any correctly formated name and email credentials on the login page.
+2. Browse the list of available dogs on the main page.
+3. Use the sidebar to filter dogs based on breed, age, or location.
+4. Click the heart icon on a dog's card to add it to your favorites.
+5. Access your favorites list by clicking the favorites button in the top right corner.
+6. Generate a match from your favorites by clicking the "Generate Match" button in the favorites list.
