@@ -75,3 +75,21 @@ Execution time: 15.67 ms
 ```
 
 This feature allows you to compare the performance of the algorithm on different input sizes and can be useful for optimization purposes.
+
+## Testing
+
+This project uses Jest for unit testing. To run the tests:
+
+1. Make sure you have installed the dependencies:
+   ```
+   npm install
+   ```
+
+2. Run the test command:
+   ```
+   npm test
+   ```
+
+The tests cover various scenarios including small and large grids, empty grids, and grids with no connected shapes.
+
+To add more tests, you can modify the `src/__tests__/connectedShapes.test.ts` file.
