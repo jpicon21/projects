@@ -56,3 +56,22 @@ connected-shapes-counter/
 ## How It Works
 
 The solution uses a depth-first search (DFS) algorithm to explore connected shapes in the grid. It processes each cell in the grid, and when it finds a '1' that hasn't been visited yet, it starts a DFS from that cell to mark all connected '1's as part of the same shape.
+
+## Performance Measurement
+
+This project now includes a feature to measure the execution time for processing each input file. When you run the program, it will output not only the number of connected shapes found but also the time taken to process each file.
+
+Example output:
+
+```
+File: data/data_small.txt
+Number of connected shapes: 3
+Execution time: 1.23 ms
+---
+File: data/data_large.txt
+Number of connected shapes: 42
+Execution time: 15.67 ms
+---
+```
+
+This feature allows you to compare the performance of the algorithm on different input sizes and can be useful for optimization purposes.

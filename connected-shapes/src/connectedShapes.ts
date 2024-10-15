@@ -43,12 +43,28 @@ class ConnectedShapesCounter {
     }
 }
 
-function main() {
-    const smallCounter = new ConnectedShapesCounter('data/data_small.txt');
-    console.log('Number of connected shapes in data_small.txt:', smallCounter.countConnectedShapes());
+function measureExecutionTime(filename: string): { count: number; executionTime: number } {
+    const startTime = process.hrtime();
+    
+    const counter = new ConnectedShapesCounter(filename);
+    const count = counter.countConnectedShapes();
+    
+    const endTime = process.hrtime(startTime);
+    const executionTime = endTime[0] * 1000 + endTime[1] / 1000000; // Convert to milliseconds
+    
+    return { count, executionTime };
+}
 
-    const largeCounter = new ConnectedShapesCounter('data/data_large.txt');
-    console.log('Number of connected shapes in data_large.txt:', largeCounter.countConnectedShapes());
+function main() {
+    const files = ['data/data_small.txt', 'data/data_large.txt'];
+    
+    files.forEach(file => {
+        const { count, executionTime } = measureExecutionTime(file);
+        console.log(`File: ${file}`);
+        console.log(`Number of connected shapes: ${count}`);
+        console.log(`Execution time: ${executionTime.toFixed(2)} ms`);
+        console.log('---');
+    });
 }
 
 main();
