@@ -20,7 +20,7 @@ displays it in a dynamically rendered table.
 1. Clone the repository:
 ```bash
 git clone <your-repo-url>
-cd user-table-app
+cd invis-user-table
 ```
 
 2. Install dependencies:
