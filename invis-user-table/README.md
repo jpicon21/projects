@@ -174,6 +174,7 @@ This ensures:
 
 ## Future Enhancements
 
+- **Real Population Data**: Use OpenWeatherMap API in order to get real population data and fallback on mock data if it fails
 - **Pagination**: For handling larger datasets
 - **Filtering**: Column-specific filter inputs
 - **Column Visibility**: Toggle columns on/off
