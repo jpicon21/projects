@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-4. Open loaclahost url from terminal in your browser
+4. Open localhost url from terminal in your browser
 
 ## Build for Production
 
